@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5f1e8">
+  <meta name="description" content="Perfil profissional de Karina Barros, Bacharel em Química com experiência em Controle de Qualidade na indústria de cosméticos.">
+  <title>Karina Barros | Bacharel em Química</title>
+  <style>
+    :root {
+      --ink: #20201e;
+      --paper: #fffefa;
+      --beige: #f5f1e8;
+      --muted: #686762;
+      --line: #d9d4ca;
+      --taupe: #9b765d;
+      --taupe-dark: #75533f;
+      --white: #ffffff;
+      --max-width: 1180px;
+      --section-space: clamp(4rem, 8vw, 7.5rem);
+      --radius: 4px;
+      --shadow: 0 2px 12px rgba(32, 32, 30, 0.06);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    button, input, textarea { font: inherit; }
+    button:focus-visible, a:focus-visible {
+      outline: 2px solid var(--taupe-dark);
+      outline-offset: 4px;
+    }
+    .container { width: min(var(--max-width), calc(100% - 3rem)); margin-inline: auto; }
+    .eyebrow {
+      margin: 0 0 1rem;
+      color: var(--taupe-dark);
+      font-size: .76rem;
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+    h1, h2, h3, p { margin-top: 0; }
+    h1, h2, h3 { line-height: 1.12; letter-spacing: -.035em; }
+    h1 { margin-bottom: 1.5rem; font-size: clamp(2.7rem, 6.5vw, 5.4rem); font-weight: 700; }
+    h2 { margin-bottom: 1.2rem; font-size: clamp(2rem, 4vw, 3.25rem); }
+    h3 { margin-bottom: .7rem; font-size: 1.2rem; }
+    .lead { max-width: 62ch; color: var(--muted); font-size: clamp(1.05rem, 1.7vw, 1.2rem); line-height: 1.75; }
+    .section { padding-block: var(--section-space); }
+    .section-head { max-width: 720px; margin-bottom: 3rem; }
+    .rule { height: 1px; border: 0; background: var(--line); margin: 0; }
+
+    .site-header {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(255, 254, 250, .96);
+      border-bottom: 1px solid rgba(217, 212, 202, .8);
+      backdrop-filter: blur(12px);
+    }
+    .nav-wrap { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
+    .brand { display: inline-flex; align-items: center; gap: .8rem; font-weight: 700; letter-spacing: -.02em; }
+    .brand-mark {
+      display: grid; place-items: center; width: 36px; height: 36px;
+      border: 1px solid var(--ink); font-size: .8rem; letter-spacing: .04em;
+    }
+    .nav-links { display: flex; align-items: center; gap: clamp(1rem, 2.3vw, 2rem); }
+    .nav-links a { position: relative; color: var(--muted); font-size: .9rem; transition: color .2s ease; }
+    .nav-links a:hover, .nav-links a.active { color: var(--ink); }
+    .nav-links a.active::after {
+      content: ""; position: absolute; left: 0; right: 0; bottom: -8px; height: 2px; background: var(--taupe);
+    }
+    .menu-toggle {
+      display: none; border: 1px solid var(--line); border-radius: var(--radius);
+      background: transparent; padding: .55rem .75rem; color: var(--ink); cursor: pointer;
+    }
+
+    .hero { padding-block: clamp(4rem, 9vw, 8.5rem); overflow: hidden; }
+    .hero-grid { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(270px, .75fr); gap: clamp(2.5rem, 7vw, 7rem); align-items: center; }
+    .hero-copy { max-width: 740px; }
+    .hero-copy h1 span { display: block; color: var(--taupe-dark); }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: .85rem; margin-top: 2rem; }
+    .button {
+      display: inline-flex; justify-content: center; align-items: center; gap: .65rem;
+      min-height: 48px; padding: .8rem 1.1rem; border: 1px solid var(--ink);
+      border-radius: 2px; font-weight: 700; font-size: .9rem; cursor: pointer;
+      transition: transform .22s ease, background .22s ease, color .22s ease, box-shadow .22s ease;
+    }
+    .button:hover { transform: translateY(-2px); box-shadow: 0 5px 14px rgba(32, 32, 30, .12); }
+    .button-primary { background: var(--ink); color: var(--white); }
+    .button-primary:hover { background: #3a3935; }
+    .button-secondary { background: transparent; color: var(--ink); }
+    .button-secondary:hover { background: var(--beige); }
+    .hero-visual {
+      position: relative; min-height: 380px; display: flex; flex-direction: column; justify-content: space-between;
+      padding: clamp(1.5rem, 3vw, 2.4rem); background: var(--beige); border: 1px solid var(--line);
+    }
+    .visual-index { color: var(--muted); font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; }
+    .molecule { width: 100%; max-width: 310px; margin: 1.5rem auto; }
+    .visual-note { align-self: flex-end; max-width: 220px; padding-top: 1rem; border-top: 1px solid #c8b8a8; color: var(--muted); font-size: .85rem; }
+    .hero-meta { display: flex; flex-wrap: wrap; gap: .8rem 1.5rem; margin-top: 2.5rem; color: var(--muted); font-size: .82rem; }
+    .hero-meta span { display: inline-flex; align-items: center; gap: .5rem; }
+    .hero-meta span::before { content: ""; width: 6px; height: 6px; background: var(--taupe); }
+
+    .about { background: var(--beige); }
+    .about-grid { display: grid; grid-template-columns: .75fr 1.25fr; gap: clamp(2rem, 7vw, 7rem); }
+    .about-label { max-width: 260px; color: var(--muted); font-size: .95rem; }
+    .about-copy p { max-width: 68ch; color: #45443f; }
+    .about-copy p:last-child { margin-bottom: 0; }
+    .quote-line { margin-top: 2rem; padding-left: 1.25rem; border-left: 3px solid var(--taupe); font-weight: 700; }
+
+    .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 clamp(2rem, 6vw, 6rem); }
+    .skill-item { display: grid; grid-template-columns: 44px 1fr; gap: 1rem; padding: 1.5rem 0; border-top: 1px solid var(--line); }
+    .skill-number { color: var(--taupe-dark); font-family: "Courier New", monospace; font-size: .8rem; padding-top: .2rem; }
+    .skill-item p { margin-bottom: 0; color: var(--muted); font-size: .94rem; }
+    .tag-list { display: flex; flex-wrap: wrap; gap: .65rem; margin-top: 2.5rem; }
+    .tag { padding: .45rem .7rem; border: 1px solid var(--line); color: #4d4b46; font-size: .82rem; background: var(--paper); }
+
+    .experience { background: #f9f7f2; }
+    .experience-grid { display: grid; grid-template-columns: .75fr 1.25fr; gap: clamp(2rem, 7vw, 7rem); }
+    .experience-aside { color: var(--muted); }
+    .experience-card { padding: 2rem; background: var(--white); border: 1px solid var(--line); box-shadow: var(--shadow); }
+    .experience-card-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; padding-bottom: 1.4rem; border-bottom: 1px solid var(--line); }
+    .experience-card .label { display: inline-block; margin-bottom: .8rem; color: var(--taupe-dark); font-size: .74rem; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
+    .experience-card h3 { font-size: 1.5rem; }
+    .experience-card-top p { margin-bottom: 0; color: var(--muted); font-size: .9rem; }
+    .experience-card ul { display: grid; gap: .9rem; padding-left: 1.15rem; margin: 1.5rem 0 0; }
+    .experience-card li { padding-left: .25rem; color: #45443f; }
+    .experience-card li::marker { color: var(--taupe); }
+
+    .education-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: stretch; }
+    .education-card { padding: 2rem; border: 1px solid var(--line); }
+    .education-card.featured { background: var(--ink); color: var(--white); border-color: var(--ink); }
+    .education-card .small-label { margin-bottom: 2rem; color: var(--taupe); font-size: .75rem; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
+    .education-card.featured .small-label { color: #d4b49a; }
+    .education-card p { margin-bottom: 0; color: var(--muted); }
+    .education-card.featured p { color: #d2d0c9; }
+
+    .contact { background: var(--beige); }
+    .contact-grid { display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 2rem; }
+    .contact-copy { max-width: 700px; }
+    .contact-copy p { color: var(--muted); }
+    .copy-feedback { min-height: 1.5rem; margin: .75rem 0 0; color: var(--taupe-dark); font-size: .85rem; }
+    footer { padding-block: 1.5rem; background: var(--ink); color: #e8e5de; }
+    .footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 1rem; font-size: .82rem; }
+    .footer-inner p { margin: 0; }
+    .back-top { color: #e8e5de; border-bottom: 1px solid #8e8a80; }
+
+    .reveal { opacity: 0; transform: translateY(16px); transition: opacity .42s ease-out, transform .42s ease-out; }
+    .reveal.is-visible { opacity: 1; transform: translateY(0); }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+      .reveal { opacity: 1; transform: none; }
+    }
+    @media (max-width: 850px) {
+      .nav-links { gap: 1rem; }
+      .hero-grid { grid-template-columns: 1fr .7fr; gap: 2rem; }
+      .hero-visual { min-height: 320px; }
+      .about-grid, .experience-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+      .about-label, .experience-aside { max-width: 620px; }
+    }
+    @media (max-width: 680px) {
+      .container { width: min(100% - 2rem, var(--max-width)); }
+      .nav-wrap { min-height: 68px; }
+      .menu-toggle { display: inline-flex; align-items: center; gap: .5rem; }
+      .nav-links {
+        display: none; position: absolute; top: calc(100% + 1px); left: 0; right: 0;
+        padding: 1rem; background: var(--paper); border-bottom: 1px solid var(--line);
+        flex-direction: column; align-items: stretch; gap: 0;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links a { padding: .8rem .25rem; border-bottom: 1px solid #eee9df; }
+      .nav-links a:last-child { border-bottom: 0; }
+      .nav-links a.active::after { display: none; }
+      .hero { padding-block: 4rem 4.5rem; }
+      .hero-grid { grid-template-columns: 1fr; }
+      .hero-visual { min-height: 270px; }
+      .molecule { max-width: 220px; max-height: 160px; }
+      .hero-meta { margin-top: 1.8rem; }
+      .skills-grid, .education-grid, .contact-grid { grid-template-columns: 1fr; }
+      .section-head { margin-bottom: 2rem; }
+      .experience-card { padding: 1.4rem; }
+      .experience-card-top { flex-direction: column; }
+      .education-card { padding: 1.5rem; }
+      .education-card .small-label { margin-bottom: 1.4rem; }
+      .contact-grid { align-items: start; }
+      .footer-inner { align-items: flex-start; flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#inicio" aria-label="Karina Barros — início">
+        <span class="brand-mark" aria-hidden="true">KB</span>
+        <span>Karina Barros</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.7" stroke-linecap="square"/></svg>
+        Menu
+      </button>
+      <nav class="nav-links" id="nav-links" aria-label="Navegação principal">
+        <a href="#sobre">Sobre</a>
+        <a href="#competencias">Competências</a>
+        <a href="#experiencia">Experiência</a>
+        <a href="#formacao">Formação</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Perfil profissional · Química</p>
+          <h1>Karina <span>Barros.</span></h1>
+          <p class="lead">Bacharel em Química com experiência em Controle de Qualidade na indústria de cosméticos, realizando análises de matérias-primas e ensaios físico-químicos.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#experiencia">Conheça minha experiência
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="1.7" stroke-linecap="square"/></svg>
+            </a>
+            <button class="button button-secondary" id="copy-profile" type="button">Copiar resumo profissional</button>
+          </div>
+          <p class="copy-feedback" id="copy-feedback" role="status" aria-live="polite"></p>
+          <div class="hero-meta" aria-label="Áreas profissionais">
+            <span>Controle de Qualidade</span>
+            <span>Análises físico-químicas</span>
+            <span>Indústria cosmética</span>
+          </div>
+        </div>
+        <aside class="hero-visual reveal" aria-label="Ilustração abstrata inspirada na química">
+          <span class="visual-index">01 / Ciência &amp; qualidade</span>
+          <svg class="molecule" viewBox="0 0 320 250" fill="none" role="img" aria-label="Ilustração geométrica de uma estrutura molecular">
+            <g stroke="#9b765d" stroke-width="1.5">
+              <path d="M76 126 127 76 190 92 233 145 180 191 111 181 76 126Z"/>
+              <path d="M127 76 111 181M190 92 180 191M76 126 233 145"/>
+              <path d="M127 76 160 35M233 145 278 119M111 181 79 220"/>
+            </g>
+            <g fill="#f5f1e8" stroke="#75533f" stroke-width="2">
+              <circle cx="76" cy="126" r="9"/><circle cx="127" cy="76" r="9"/>
+              <circle cx="190" cy="92" r="9"/><circle cx="233" cy="145" r="9"/>
+              <circle cx="180" cy="191" r="9"/><circle cx="111" cy="181" r="9"/>
+              <circle cx="160" cy="35" r="7"/><circle cx="278" cy="119" r="7"/><circle cx="79" cy="220" r="7"/>
+            </g>
+            <circle cx="160" cy="137" r="23" fill="#9b765d"/>
+            <path d="M151 137h18M160 128v18" stroke="#fffefa" stroke-width="1.5"/>
+          </svg>
+          <p class="visual-note">Rigor analítico, atenção aos detalhes e compromisso com a qualidade.</p>
+        </aside>
+      </div>
+    </section>
+
+    <hr class="rule">
+
+    <section class="section about" id="sobre">
+      <div class="container about-grid">
+        <div class="reveal">
+          <p class="eyebrow">02 / Sobre mim</p>
+          <h2>Conhecimento técnico com atenção a cada detalhe.</h2>
+          <p class="about-label">Formação em Química e vivência prática em laboratório de Controle de Qualidade.</p>
+        </div>
+        <div class="about-copy reveal">
+          <p>Sou Bacharel em Química e tenho experiência na indústria de cosméticos, na área de Controle de Qualidade. Minha atuação inclui análises organolépticas de matérias-primas, testes de ponto de fusão e viscosidade, análises físico-químicas e preenchimento de relatórios.</p>
+          <p>Essas atividades exigem organização, observação cuidadosa e atenção aos procedimentos e aos resultados. Busco oportunidades em que possa aplicar minha formação e experiência para contribuir com a qualidade e a confiabilidade dos processos.</p>
+          <p class="quote-line">Meu foco profissional é a qualidade, apoiada por análises cuidadosas e documentação organizada.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="competencias">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">03 / Competências</p>
+          <h2>Conhecimentos aplicados em laboratório.</h2>
+          <p class="lead">Competências técnicas relacionadas às atividades que fazem parte da minha experiência profissional.</p>
+        </div>
+        <div class="skills-grid">
+          <article class="skill-item reveal">
+            <span class="skill-number">01</span>
+            <div><h3>Análises organolépticas</h3><p>Avaliação de características observáveis de matérias-primas, conforme os procedimentos aplicáveis.</p></div>
+          </article>
+          <article class="skill-item reveal">
+            <span class="skill-number">02</span>
+            <div><h3>Análises físico-químicas</h3><p>Realização de análises para avaliação de características físico-químicas de materiais.</p></div>
+          </article>
+          <article class="skill-item reveal">
+            <span class="skill-number">03</span>
+            <div><h3>Teste de ponto de fusão</h3><p>Execução de ensaio de ponto de fusão como parte das rotinas de análise laboratorial.</p></div>
+          </article>
+          <article class="skill-item reveal">
+            <span class="skill-number">04</span>
+            <div><h3>Teste de viscosidade</h3><p>Realização de testes de viscosidade dentro das atividades de Controle de Qualidade.</p></div>
+          </article>
+          <article class="skill-item reveal">
+            <span class="skill-number">05</span>
+            <div><h3>Relatórios técnicos</h3><p>Preenchimento de relatórios relacionados às atividades e aos resultados das análises.</p></div>
+          </article>
+          <article class="skill-item reveal">
+            <span class="skill-number">06</span>
+            <div><h3>Rotina de Controle de Qualidade</h3><p>Atuação em ambiente industrial de cosméticos, com foco em análises e qualidade de matérias-primas.</p></div>
+          </article>
+        </div>
+        <div class="tag-list reveal" aria-label="Palavras-chave profissionais">
+          <span class="tag">Química</span><span class="tag">Laboratório</span><span class="tag">Matérias-primas</span>
+          <span class="tag">Controle de Qualidade</span><span class="tag">Indústria de cosméticos</span>
+          <span class="tag">Análises físico-químicas</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section experience" id="experiencia">
+      <div class="container experience-grid">
+        <div class="experience-aside reveal">
+          <p class="eyebrow">04 / Experiência</p>
+          <h2>Atuação profissional.</h2>
+          <p>Experiência prática na área de Controle de Qualidade da indústria de cosméticos.</p>
+        </div>
+        <article class="experience-card reveal">
+          <div class="experience-card-top">
+            <div>
+              <span class="label">Experiência profissional</span>
+              <h3>Controle de Qualidade</h3>
+              <p>Indústria de cosméticos</p>
+            </div>
+            <span class="visual-index">Laboratório</span>
+          </div>
+          <ul>
+            <li>Realização de análises organolépticas de matérias-primas.</li>
+            <li>Execução de testes de ponto de fusão e viscosidade.</li>
+            <li>Realização de análises físico-químicas.</li>
+            <li>Preenchimento de relatórios relacionados às atividades de laboratório.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="formacao">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">05 / Formação</p>
+          <h2>Base científica para a prática profissional.</h2>
+        </div>
+        <div class="education-grid">
+          <article class="education-card featured reveal">
+            <p class="small-label">Formação acadêmica</p>
+            <h3>Bacharelado em Química</h3>
+            <p>Formação superior em Química.</p>
+          </article>
+          <article class="education-card reveal">
+            <p class="small-label">Direcionamento profissional</p>
+            <h3>Controle de Qualidade e laboratório</h3>
+            <p>Interesse em oportunidades alinhadas à experiência com análises de matérias-primas e ensaios físico-químicos.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contato">
+      <div class="container contact-grid">
+        <div class="contact-copy reveal">
+          <p class="eyebrow">06 / Próximos passos</p>
+          <h2>Vamos falar sobre oportunidades?</h2>
+          <p>Tenho interesse em oportunidades profissionais compatíveis com minha formação em Química e experiência em Controle de Qualidade. Para contato, utilize os canais profissionais informados no meu currículo.</p>
+        </div>
+        <div class="reveal">
+          <button class="button button-primary" id="copy-contact" type="button">
+            Copiar apresentação
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="8" y="8" width="11" height="12" stroke="currentColor" stroke-width="1.6"/><path d="M16 8V4H4v12h4" stroke="currentColor" stroke-width="1.6"/></svg>
+          </button>
+          <p class="copy-feedback" id="contact-feedback" role="status" aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Karina Barros · Perfil profissional</p>
+      <a class="back-top" href="#inicio">Voltar ao início ↑</a>
+    </div>
+  </footer>
+
+  <script>
+    (() => {
+      const menuButton = document.querySelector('.menu-toggle');
+      const nav = document.querySelector('#nav-links');
+      const navLinks = [...document.querySelectorAll('.nav-links a')];
+
+      menuButton.addEventListener('click', () => {
+        const isOpen = nav.classList.toggle('open');
+        menuButton.setAttribute('aria-expanded', String(isOpen));
+      });
+
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('open');
+          menuButton.setAttribute('aria-expanded', 'false');
+        });
+      });
+
+      const sections = [...document.querySelectorAll('main section[id]')];
+      if ('IntersectionObserver' in window) {
+        const sectionObserver = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            navLinks.forEach(link => {
+              link.classList.toggle('active', link.getAttribute('href') === `#${entry.target.id}`);
+            });
+          });
+        }, { rootMargin: '-35% 0px -55% 0px' });
+        sections.forEach(section => sectionObserver.observe(section));
+
+        const revealObserver = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              revealObserver.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12 });
+        document.querySelectorAll('.reveal').forEach(element => revealObserver.observe(element));
+      } else {
+        document.querySelectorAll('.reveal').forEach(element => element.classList.add('is-visible'));
+      }
+
+      const profileText = 'Karina Barros — Bacharel em Química, com experiência em Controle de Qualidade na indústria de cosméticos. Atuação em análises organolépticas de matérias-primas, análises físico-químicas, testes de ponto de fusão e viscosidade, além do preenchimento de relatórios técnicos.';
+      const contactText = 'Olá! Sou Karina Barros, Bacharel em Química, com experiência em Controle de Qualidade na indústria de cosméticos. Tenho experiência com análises organolépticas de matérias-primas, análises físico-químicas, testes de ponto de fusão e viscosidade, além do preenchimento de relatórios. Tenho interesse em conversar sobre oportunidades profissionais alinhadas à minha experiência.';
+
+      async function copyText(text, feedback) {
+        try {
+          if (navigator.clipboard && window.isSecureContext) {
+            await navigator.clipboard.writeText(text);
+          } else {
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            textarea.style.position = 'fixed';
+            textarea.style.opacity = '0';
+            document.body.appendChild(textarea);
+            textarea.select();
+            const success = document.execCommand('copy');
+            textarea.remove();
+            if (!success) throw new Error('copy failed');
+          }
+          feedback.textContent = 'Texto copiado com sucesso.';
+        } catch (error) {
+          feedback.textContent = 'Não foi possível copiar automaticamente. Selecione e copie o texto do perfil.';
+        }
+      }
+
+      document.querySelector('#copy-profile').addEventListener('click', () => {
+        copyText(profileText, document.querySelector('#copy-feedback'));
+      });
+      document.querySelector('#copy-contact').addEventListener('click', () => {
+        copyText(contactText, document.querySelector('#contact-feedback'));
+      });
+      document.querySelector('#year').textContent = new Date().getFullYear();
+    })();
+  </script>
+</body>
+</html>
